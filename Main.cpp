@@ -81,7 +81,7 @@ glm::mat4 identityMatrix;
 std::vector<std::function<float()>> getters;
 std::vector<std::function< void(float)> > setters;
 
-int main()
+int WINAPI WinMain( HINSTANCE instance, HINSTANCE prevInstance, LPSTR commandLine, int cmdShow )
 {
 	if (!success) return -1;
 	if (!window.inMain()) return -1;
@@ -280,4 +280,6 @@ int main()
 
 	// close glfw
 	window.terminate();
+
+	return 0;
 }
